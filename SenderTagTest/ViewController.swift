@@ -37,14 +37,15 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         
         // 中心点の緯度経度.
-        let myLat: CLLocationDegrees = 35.681382
-        let myLng: CLLocationDegrees = 139.766084
+        let myLat: CLLocationDegrees = 36.830330
+        let myLng: CLLocationDegrees = 127.593436
         let myCoordinate: CLLocationCoordinate2D = CLLocationCoordinate2DMake(myLat, myLng)
         
         // 縮尺.
-        let myLatDist : CLLocationDistance = 0.1
-        let myLngDist : CLLocationDistance = 0.1
+        let myLatDist : CLLocationDistance = 3
+        let myLngDist : CLLocationDistance = 3
         let span = MKCoordinateSpanMake(myLatDist, myLngDist)
+        
         
         // Regionを作成.
         let myRegion: MKCoordinateRegion = MKCoordinateRegion(center: myCoordinate, span: span)
@@ -55,17 +56,17 @@ class ViewController: UIViewController, MKMapViewDelegate {
         
         // 標準の場合はこちら var testPin:MKPointAnnotation = MKPointAnnotation()
         let testPin:CustomMKPointAnnotation = CustomMKPointAnnotation()
-        testPin.coordinate = myCoordinate
-        testPin.title = "東京駅"
-        testPin.subtitle = "新幹線はこっから"
+        testPin.coordinate =  CLLocationCoordinate2DMake(36.647336, 127.494273)
+        testPin.title = "팔봉제빵점"
+        testPin.subtitle = "パルボン製パン店"
 //        testPin.pinColor = MKPinAnnotationColor.Red
         testPin.senderTag = 1
         map.addAnnotation(testPin)
         
         let testPin2:CustomMKPointAnnotation = CustomMKPointAnnotation()
-        testPin2.coordinate = CLLocationCoordinate2DMake(35.698683, 139.774219)
-        testPin2.title = "秋葉原駅"
-        testPin2.subtitle = "アニメとゲームと電機の不思議な街♪"
+        testPin2.coordinate = CLLocationCoordinate2DMake(37.121341, 127.337007)
+        testPin2.title = "용인 대장금 파크"
+        testPin2.subtitle = "龍仁大長今パーク"
 //        testPin2.pinColor = MKPinAnnotationColor.Green
         testPin2.senderTag = 2
         map.addAnnotation(testPin2)
