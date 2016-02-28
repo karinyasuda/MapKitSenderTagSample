@@ -9,13 +9,18 @@
 import UIKit
 
 @UIApplicationMain
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    
+    
 
     var window: UIWindow?
-
+//    var color2 = UIColor(red: 243/255, green: 156/255, blue: 18/255, alpha: 1.0)
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+//        UINavigationBar.appearance().barTintColor = color2
         return true
     }
 
